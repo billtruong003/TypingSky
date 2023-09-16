@@ -5,7 +5,7 @@ using NaughtyAttributes;
 using System;
 
 [CreateAssetMenu(fileName = "SpriteData", menuName = "Typing Sky/Sprite Asset/SpriteData")]
-public class EnemyConfig : ScriptableObject
+public class SpriteConfig : ScriptableObject
 {
     [Serializable]
     public class Enemy
@@ -26,6 +26,24 @@ public class EnemyConfig : ScriptableObject
 
     public List<Player> PlayerDatas;
     public List<Enemy> EnemyDatas;
+
+    public Sprite GetPlayerSprite()
+    {
+        Sprite Psprite;
+        int rndIndexSprite = UnityEngine.Random.Range(0, PlayerDatas.Count);
+        string spritePath = PlayerDatas[rndIndexSprite].SourcePath;
+        Psprite = Resources.Load<Sprite>(spritePath);
+        return Psprite;
+    }
+    public Sprite GetEnemySprite()
+    {
+        Sprite Esprite;
+        int rndIndexSprite = UnityEngine.Random.Range(0, EnemyDatas.Count);
+
+        string spritePath = EnemyDatas[rndIndexSprite].SourcePath;
+        Esprite = Resources.Load<Sprite>(spritePath);
+        return Esprite;
+    }
 
 #if UNITY_EDITOR
     [SerializeField] private int enemySpriteNum = 10;
