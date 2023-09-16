@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4588c062e2c404b439bdb18fa078dae1, type: 3}
+  m_Name: SpriteData
+  m_EditorClassIdentifier: 
+  PlayerDatas:
+  - PlayerName: ship (1)
+    SourcePath: Resources/ship (1)
+    BulletCol: {r: 0, g: 0, b: 0, a: 0}
+  - PlayerName: ship (2)
+    SourcePath: Resources/ship (2)
+    BulletCol: {r: 0, g: 0, b: 0, a: 0}
+  - PlayerName: ship (3)
+    SourcePath: Resources/ship (3)
+    BulletCol: {r: 0, g: 0, b: 0, a: 0}
+  - PlayerName: ship (4)
+    SourcePath: Resources/ship (4)
+    BulletCol: {r: 0, g: 0, b: 0, a: 0}
+  - PlayerName: ship (5)
+    SourcePath: Resources/ship (5)
+    BulletCol: {r: 0, g: 0, b: 0, a: 0}
+  - PlayerName: ship (6)
+    SourcePath: Resources/ship (6)
+    BulletCol: {r: 0, g: 0, b: 0, a: 0}
+  EnemyDatas:
+  - EnemyName: ship (1)
+    SourcePath: Resources/ship (1)
+  - EnemyName: ship (2)
+    SourcePath: Resources/ship (2)
+  - EnemyName: ship (3)
+    SourcePath: Resources/ship (3)
+  - EnemyName: ship (4)
+    SourcePath: Resources/ship (4)
+  - EnemyName: ship (5)
+    SourcePath: Resources/ship (5)
+  - EnemyName: ship (6)
+    SourcePath: Resources/ship (6)
+  - EnemyName: ship (7)
+    SourcePath: Resources/ship (7)
+  - EnemyName: ship (8)
+    SourcePath: Resources/ship (8)
+  - EnemyName: ship (9)
+    SourcePath: Resources/ship (9)
+  - EnemyName: ship (10)
+    SourcePath: Resources/ship (10)
+  enemySpriteNum: 10
+  playerSpriteNum: 6
