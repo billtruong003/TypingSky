@@ -525,7 +525,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d406e977d42ea84c92d9c4642fcc4c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_spriteConfig: {fileID: 0}
+  m_spriteConfig: {fileID: 11400000, guid: ab39f5c33dc60664d87f0eff68e4f947, type: 2}
+  m_prefabConfig: {fileID: 11400000, guid: 4ea0e4749f7be034bb01d63dd20b4729, type: 2}
   m_player: {fileID: 0}
 --- !u!1001 &7065881521242831017
 PrefabInstance:

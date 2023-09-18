@@ -35,7 +35,9 @@ public class MainManager : MonoBehaviour
     }
     private void InitPlayer()
     {
-
+        m_player = GameObject.Instantiate(m_prefabConfig.GetPrefab("Player"));
+        Sprite playerSprite = m_player.GetComponentInChildren<Sprite>();
+        playerSprite = m_spriteConfig.GetPlayerSprite();
     }
 
     // Update is called once per frame

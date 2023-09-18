@@ -1,24 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-[CreateAssetMenu(fileName = "SpriteData", menuName = "Typing Sky/Sprite Asset/SpriteData")]
+using System;
+using NaughtyAttributes;
+[CreateAssetMenu(fileName = "PrefabData", menuName = "Typing Sky/Prefab Asset/PrefabData")]
 public class PrefabConfig : ScriptableObject
 {
-    private string PATH_PREFAB = "Resources/Prefabs";
+    private string PATH_PREFAB = "Resources/Prefabs/";
+    [Serializable]
     class Prefab
     {
-
+        public string namePrefab;
+        public string pathPrefab;
     }
-    // Start is called before the first frame update
-    void Start()
-    {
+    [SerializeField] private List<Prefab> prefabData;
 
+    [Button]
+    private void FillPathPrefab()
+    {
+        foreach (var prefab in prefabData)
+        {
+            prefab.pathPrefab = PATH_PREFAB + prefab.namePrefab;
+        }
     }
-
-    // Update is called once per frame
-    void Update()
+    public GameObject GetPrefab(string objectName)
     {
-
+        foreach (var pref in prefabData)
+        {
+            if (pref.namePrefab == objectName)
+            {
+                GameObject prefab = Resources.Load<GameObject>(pref.pathPrefab);
+                return prefab;
+            }
+        }
+        return null;
     }
 }
